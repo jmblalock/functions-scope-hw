@@ -50,3 +50,23 @@ function checkPalindrome(string) {
 }
 console.log(checkPalindrome("Radar"));
 console.log(checkPalindrome("Borscht"));
+
+/*
+## 3. Digit Sum
+Write a function `sumDigits` that accepts a number and returns the sum of its
+digits.
+
+console.log(sumDigits(42));
+    => 6;
+*/
+
+function sumDigits(number) {
+    sum = 0;
+    numStr = number.toString();
+    numArr = numStr.split('');
+    for (let i = 0; i < numArr.length; i++) {
+        sum += parseInt(numArr[i]);
+    }
+    return sum;
+}
+console.log(sumDigits(42));

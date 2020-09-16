@@ -88,3 +88,23 @@ function calculateSide(sideA, sideB) {
     return sideC;
 }
 console.log(calculateSide(8, 6));
+
+/*
+## 5. Sum Array
+Write a function `sumArray` that takes an **array** as an argument.
+The array should contain numbers. The function should return the sum of the 
+numbers in the array. **Do not use `.reduce()`**.
+
+Expected result:
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
+    => 21
+*/
+
+function sumArray(array) {
+    sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += parseInt(array[i]);
+    }
+    return sum;
+}
+console.log(sumArray([1, 2, 3, 4, 5, 6]));

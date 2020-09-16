@@ -70,3 +70,21 @@ function sumDigits(number) {
     return sum;
 }
 console.log(sumDigits(42));
+
+/*
+## 4. Pythagoras
+Write a function `calculateSide` that takes two arguments: `sideA` and 
+`sideB`, and returns the solution for sideC using the Pythagorean theorem.
+
+**_restriction_**: for this problem, do NOT use `Math.hypot()` 
+(but for the rest of time, once you've done this problem feel free)
+
+console.log(calculateSide(8, 6));
+    => 10
+*/
+
+function calculateSide(sideA, sideB) {
+    sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));   
+    return sideC;
+}
+console.log(calculateSide(8, 6));

@@ -108,3 +108,46 @@ function sumArray(array) {
     return sum;
 }
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+/*
+## 6. Prime Numbers
+A Prime number is a number that is not evenly divisible by another number 
+except 1 and itself. To test whether a number is Prime, you only need to test 
+as far as the **square root** of that number. This is advisable for 
+optimization and testing large numbers.
+
+### Step One
+Write a function called `checkPrime` that will test whether a number is Prime.
+The function will return true (Boolean) if Prime, false if not.
+
+### Step Two
+Write another function called `printPrimes` that will print (console log) all
+the Primes up to an arbitrary limit. For example, if you invoke your function
+with `printPrimes(97)`, it will print all the Prime numbers up to and
+including 97. This function can **call on** the previous `checkPrime`
+function.
+*/
+
+function checkPrime(number) {
+    if (number === 0 || number === 1) {
+        return false
+    } else {
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+}
+
+function printPrimes(number) {
+    for (let i = 0; i <= number; i++) {
+        if (checkPrime(i) === true) {
+            console.log(i)
+        }
+    }
+}
+
+printPrimes(97);
